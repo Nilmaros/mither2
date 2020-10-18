@@ -1,13 +1,12 @@
 ﻿@page "/"
+@using mither2.Data
+@using mither2.Model
+@inject BrandService BrandService
 
 <!doctype html>
 <html lang="en">
     
 <body>
-
-	<!--================ Start Header Area =================-->
-    <NavMenu />
-	<!--================ End Header Area =================-->
 
 	<!--================ Start Home Banner Area =================-->
 	<section class="home_banner_area">
@@ -34,26 +33,28 @@
 			</div>
 		</div>
 	</section>
-	<!--================ End Home Banner Area =================-->
 
-	<!--================ Start About Us Area =================-->
-	<About />
-	<!--================ End About Us Area =================-->
+	<About Banner="false"></About>
 
-	<!--================ Srart Brand Area =================-->
+	<!--================ Start Brand Area =================-->
 	<section class="brand_area section_gap_bottom">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6">
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo1.png" alt="">
+						
+						@foreach (Brand brand in brands)
+						{
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<div class="single-brand-item d-table">
+									<div class="d-table-cell text-center">
+										<img src=@brand.Image alt="">
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
+						}
+
+						@* <div class="col-lg-4 col-md-4 col-sm-6">
 							<div class="single-brand-item d-table">
 								<div class="d-table-cell text-center">
 									<img src="img/brands/logo2.png" alt="">
@@ -108,7 +109,7 @@
 									<img src="img/brands/logo9.png" alt="">
 								</div>
 							</div>
-						</div>
+						</div> *@
 					</div>
 				</div>
 				<div class="offset-lg-2 col-lg-4 col-md-6">
@@ -539,3 +540,12 @@
 </body>
 
 </html>
+
+@code {
+    private Brand[] brands;
+
+    protected override async Task OnInitializedAsync()
+    {
+        brands = await BrandService.GetBrandsAsync();
+    }
+}
