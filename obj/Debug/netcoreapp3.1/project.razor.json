@@ -45,6 +45,59 @@
         }
       },
       {
+        "HashCode": 1369347475,
+        "Kind": "Components.Component",
+        "Name": "mither2.Pages.About",
+        "AssemblyName": "mither2",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "About"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Banner",
+            "TypeName": "System.Boolean",
+            "Metadata": {
+              "Common.PropertyName": "Banner"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "mither2.Pages.About"
+        }
+      },
+      {
+        "HashCode": -841130359,
+        "Kind": "Components.Component",
+        "Name": "mither2.Pages.About",
+        "AssemblyName": "mither2",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "mither2.Pages.About"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Banner",
+            "TypeName": "System.Boolean",
+            "Metadata": {
+              "Common.PropertyName": "Banner"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "mither2.Pages.About",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1928664857,
         "Kind": "Components.Component",
         "Name": "mither2.Pages.Counter",
@@ -107,59 +160,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "mither2.Pages.Error",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1369347475,
-        "Kind": "Components.Component",
-        "Name": "mither2.Pages.About",
-        "AssemblyName": "mither2",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "About"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Banner",
-            "TypeName": "System.Boolean",
-            "Metadata": {
-              "Common.PropertyName": "Banner"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "mither2.Pages.About"
-        }
-      },
-      {
-        "HashCode": -841130359,
-        "Kind": "Components.Component",
-        "Name": "mither2.Pages.About",
-        "AssemblyName": "mither2",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "mither2.Pages.About"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Banner",
-            "TypeName": "System.Boolean",
-            "Metadata": {
-              "Common.PropertyName": "Banner"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "mither2.Pages.About",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

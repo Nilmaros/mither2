@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using mither2.Model;
@@ -14,13 +14,15 @@ namespace mither2.Data
             "img/brands/logo7.png", "img/brands/logo8.png", "img/brands/logo9.png"
         };
 
-        public Task<Brand[]> GetBrandsAsync()
+        public Task<List<Brand>> GetBrandsAsync()
         {
-            var rng = new Random();
-            return Task.FromResult(Enumerable.Range(1, 5).Select(index => new Brand
+            List<Brand> brand = new List<Brand>();
+
+            foreach(string data in MockData)
             {
-                Image = MockData[rng.Next(MockData.Length)]
-            }).ToArray());
+                brand.Add(new Brand { Image = data });
+            }
+            return Task.FromResult(brand);
         }
     }
 }
